@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title> 李慶祥的首頁</title>
+    <style media ="screen">
+    body{
+      text-align: center;
+      background-color: #00aaee;
+      color:Orange ;
+      background-image: url(bg05.jpg);
+    }
+  </style>
+  </head>
+  <body>
+<h1>名字:李慶祥</h1>
+  <h1>學號:90418123</h1>
+  <h1>學校:正修科技大學</h1>
+  <h1>班級:資工三甲</h1>
+  <h1>興趣:我很喜歡玩神奇寶貝</h1>
+  <img src="akb480.png" alt="">
+  </body>
+  </head>
+<script>
+var timer = null;
+// 顯示數字圖片
+function displayClock(num) {
+  var dig = parseInt(num/10);
+  var timetag="<img src='images\\" + dig + ".gif'>";
+  dig = num%10;
+  timetag +="<img src='images\\" + dig + ".gif'>";
+  return timetag;
+}
+// 停止計時
+function stopClock() {
+   clearTimeout(timer);
+}
+// 開始計時
+function startClock() {
+   var time = new Date();
+   // 取得時間
+   var hours = displayClock(time.getHours()) + ":";
+   var minutes = displayClock(time.getMinutes()) + ":";
+   var seconds = displayClock(time.getSeconds());
+   // 顯示時間
+   show.innerHTML = hours + minutes + seconds;
+   timer = setTimeout("startClock()",500);
+}
+</script>
+<h1></h1>
+<img src="images/akb480.jpg"alt=""onmousedown="this.src=nextImage()"
+                           onmouseover="this.src=randomImage()"                                 >
+<script>
+    var curIndex=0;
+    var imgArray =new Array();
+    var akb48=11;
+    for (i=0;i<akb48;i++)
+    {
+        imgArray[i]=new Image();
+        if (i<10) {
+            imgArray[i].src="images/akb480"+i+".jpg";   
+        }
+        else
+        imgArray[i].src="images/akb480"+i+".jpg";
+    }
+    function nextImage(){
+        curIndex++;
+        curIndex=curIndex % akb48;
+        return(imgArray[curIndex].src);
+    }
+    function nextImage(){
+        curIndex=Math.floor(Math.random()*akb48);
+        return(imgArray[curIndex].src);
+    }
+</script>
+</head>
+<body onload="startClock()" onunload="stopClock()">
+<div id="show"></div>
+</body>
+</html>
