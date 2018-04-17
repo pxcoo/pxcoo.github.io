@@ -7,20 +7,20 @@
     body{
       text-align: center;
       background-color: #00aaee;
-      color: red;
+      color:Orange ;
       background-image: url(bg05.jpg);
     }
   </style>
   </head>
   <body>
-<h3>正修科技大學</h3>
-  <h2>資訊工程系</h2>
-  <h1>李慶祥</h1>
-  <h4>9048123</h4>
-  <img src="akb48.png" alt="">
-我很喜歡玩<i>神奇寶貝</i>
-也喜歡看書
+<h1>名字:李慶祥</h1>
+  <h1>學號:90418123</h1>
+  <h1>學校:正修科技大學</h1>
+  <h1>班級:資工三甲</h1>
+  <h1>興趣:我很喜歡玩神奇寶貝</h1>
+  <img src="akb480.png" alt="">
   </body>
+  </head>
 <script>
 var timer = null;
 // 顯示數字圖片
@@ -44,19 +44,23 @@ function startClock() {
    var seconds = displayClock(time.getSeconds());
    // 顯示時間
    show.innerHTML = hours + minutes + seconds;
-   timer = setTimeout("startClock()",1000);
+   timer = setTimeout("startClock()",500);
 }
 </script>
-<h2>照片集</h2>
+<h1></h1>
 <img src="images/akb480.jpg"alt=""onmousedown="this.src=nextImage()"
                            onmouseover="this.src=randomImage()"                                 >
 <script>
     var curIndex=0;
     var imgArray =new Array();
-    var akb48=4;
+    var akb48=11;
     for (i=0;i<akb48;i++)
     {
         imgArray[i]=new Image();
+        if (i<10) {
+            imgArray[i].src="images/akb480"+i+".jpg";   
+        }
+        else
         imgArray[i].src="images/akb480"+i+".jpg";
     }
     function nextImage(){
