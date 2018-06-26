@@ -1,0 +1,110 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* STEP 1: 佈景設計 */
+body {
+   width: 100%;
+   background-image: url(imeges/wood.jpg);
+   overflow: hidden; /* 隱藏捲軸 */
+      }
+	  
+#header{
+	width: 100%;
+	height:90px;
+	background-color: #FFFFFF;
+	margin:-8px
+      }
+	  
+/* STEP 2: 頂部選單 */
+#header ul {
+   margin: 0 auto;
+   width: 1000px;
+   height: 100px;
+   }
+      
+#header li {
+   float:left;
+   }
+   
+#header li a{
+	padding: 25px 5px 0 5px;
+	text-align: center;
+	height: 40px;
+	width: 100px;
+	display: block;
+	font-size: 16px;
+	text-decoration: none;
+	letter-spacing: 2px;
+	color: #330;
+	font-family: "微軟正黑體 Light";
+      }
+	  
+/* SETP3:  頂部選單細部設計 */
+ #header ul li:nth-child(1){
+       margin:0px 0px 0px 250px;
+      }
+      #header ul li:nth-child(1):after,
+      #header ul li:nth-child(2):after,
+      #header ul li:nth-child(3):after,
+      #header ul li:nth-child(4):after,
+      #header ul li:nth-child(5):after{
+        display:block;
+        content:"";
+		background:url(../images/line.png) top right  no-repeat;
+        width:1px;
+        height:42px;
+        margin-top:-45px ;
+      }
+      
+a,p {
+     font-family:"微軟正黑體",Arial, Helvetica, sans-serif;
+     font-weight:bold;
+	 }
+
+#header ul li a:hover{ 
+	 color:#903;
+	 }
+     
+/* STEP4: 主佈局設計 */
+#wrapper {
+        //width: 100%;
+        //height: 100%;
+        //position: absolute;
+        overflow: hidden; /* VERY IMPORTANT */
+      }
+	  
+#mask {
+        width: 500%; height: 100%
+      }
+      
+.box {
+       width: 20%;
+       height: 100%;
+      }
+      
+.content {
+        width: 1000px;
+        height: 600px;
+        top: 40;
+        margin: 0 auto;
+        position: relative;
+        /*border: 1px #0CF solid;*/
+      }
+      
+/* 水平垂直置中 */
+.content .text {
+        font-size: 3em;
+        width: 500px; height: 100px; 
+        margin: auto;
+        position: absolute;
+        top: 0; left: 0; bottom: 0; right: 0;
+      }
+
+/* header圓弧設定*/  
+.classname{
+   -moz-border-radius-bottomleft:25px;
+   -moz-border-radius-bottomright:25px;
+   -webkit-border-bottom-left-radius:25px;
+   -webkit-border-bottom-right-radius:25px;border-top-left-radius:0px; border-top-right-radius:0px; border-bottom-left-radius:25px;border-bottom-right-radius:25px;
+   opacity:.6; 
+     }

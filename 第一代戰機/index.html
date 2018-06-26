@@ -1,0 +1,105 @@
+<html>
+<head>
+    <title>第一代戰機</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"/>
+  <h2 class="animated infinite bounce"> 第一代戰機 </h2>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<script language="JavaScript">
+  function ShowTime(){
+  　document.getElementById('showbox').innerHTML = new Date();
+  　setTimeout('ShowTime()',1000);
+  }
+  </script>
+  <input type ="button" onclick="javascript:location.href='file:///C:/Users/oem/Desktop/ttt/index%20(1).html'" value="回到首頁"></input>
+  <body onload="ShowTime()">
+  <div id="showbox"></div>
+  </body>
+<!--jQuery 語法-->
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  <script>
+  $(function() {
+    $( ".content,#header ul li:nth-child(1),#header ul li:nth-child(2),#header ul li:nth-child(3),#header ul li:nth-child(4),#header ul li:nth-child(5),#header ul li:nth-child(6)" ).hide();
+    $( ".content,#header ul li:nth-child(1)" ).fadeIn(2000);
+	$( ".content,#header ul li:nth-child(2)" ).fadeIn(3000);
+	$( ".content,#header ul li:nth-child(3)" ).fadeIn(4000);
+	$( ".content,#header ul li:nth-child(4)" ).fadeIn(5000);
+	$( ".content,#header ul li:nth-child(5)" ).fadeIn(6000);
+	$( ".content,#header ul li:nth-child(6)" ).fadeIn(7000);
+  });
+  </script>
+  
+<body>
+    <div id="header" class="classname" ><!--HEADER-->
+      <ul id="menu" "classname">
+        <li><a href="#section1">吸血鬼戰鬥機<div class="p-3 mb-2 bg-primary text-white">.bg-primary</div>
+            <p style="font-size: 7px">DH-100</p></a></li>
+        <li><a href="#section2">P-59戰鬥機
+            <p style="font-size:7px">Airacomet</p></a></li>
+        <li><a href="#section3">米格-9戰鬥機
+            <p style="font-size:7px">MiG-9 fighter</p>
+        </a></li>
+        <li><a href="#section4">Me 262戰鬥機
+            <p style="font-size:7px">Me 262</p>
+        </a></li>
+        <li><a href="#section5">He 162戰鬥機
+            <p style="font-size:7px">He 162</p>
+        </a></li>
+      </ul>
+    </div><!--HEADER結束-->
+
+  <div id="wrapper">
+      <ul id="mask">
+        <li id="section1" class="box"><!--01-->
+          <div class="content">
+              <div align="center"><img src="imeges/14c833cb551395626162.jpg" width="600" height="440" align="absmiddle"></div>
+          </div>
+          </li>
+             <!--END OF 01 PAGE-->
+        
+        <li id="section2" class="box"><!--02-->
+          <div class="content">
+            <div align="center"><img src="imeges/Bell_P-59B_Airacomet_at_the_National_Museum_of_the_United_States_Air_Force.jpg" width="600" height="440"></div>
+          </div>
+          </li>
+          <!--END OF 02 PAGE-->
+        
+        <li id="section3" class="box"><!--03-->
+          <div class="content">
+              <div align="center"><img src="imeges/290px-MiG-9_VVS_museum.jpg" width="600" height="440"></div>
+          </div>
+          </li>
+          <!--END OF 03 PAGE-->
+        
+        <li id="section4" class="box"><!--04-->
+          <div class="content">
+            <div align="center"><img src="imeges/下載.jpg" width="600" height="440"></div>
+          </div>     
+        </li><!--END OF 04 PAGE-->
+        
+        <li id="section5" class="box"><!--05-->
+          <div class="content">
+            <div align="center"><img src="imeges/下載1.jpg" width="600" height="440" align="absmiddle"></div>
+          </div>     
+        </li><!--END OF 05 PAGE-->
+        
+      </ul><!-- end mask -->
+  </div><!-- end wrapper -->
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://mepopedia.com/~jinjin/js/jquery.scrollTo-1.4.2-min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    $('#menu a').click(function () {
+      $('#wrapper').scrollTo($(this).attr('href'), 1000);
+      return false;
+    });  
+  });
+  </script>
+  
+</html>
